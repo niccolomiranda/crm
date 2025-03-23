@@ -37,7 +37,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
+        poppins: ["var(--font-poppins)", "sans-serif"],
       },
       boxShadow: {
         card: "0px 5px 15px 0px rgba(86, 122, 251, 0.05)",
