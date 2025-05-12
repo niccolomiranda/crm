@@ -3,8 +3,8 @@ import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 
 export const metadata: Metadata = {
-  title: "CRM Manager",
-  description: "Customer Relationship Management Application",
+  title: "Revelium Studio",
+  description: "Revelium Studio Dashboard",
 };
 
 export default function RootLayout({

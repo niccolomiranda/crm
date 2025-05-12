@@ -1,53 +1,79 @@
 import CustomerTable from "@/components/CustomerTable";
 import { customers } from "@/lib/mock-data";
 
-const apps = [
-  {
-    name: "Slack",
-    logo: "/slack_logo.svg",
-    accent: "accent-slack",
-  },
-  {
-    name: "Notion",
-    logo: "/notion_logo.svg",
-    accent: "accent-notion",
-  },
-  {
-    name: "Figma",
-    logo: "/figma_logo.svg",
-    accent: "accent-figma",
-  },
-  {
-    name: "OpenAI",
-    logo: "/openai_logo.svg",
-    accent: "accent-openai",
-  },
-  {
-    name: "Webflow",
-    logo: "/webflow_logo.svg",
-    accent: "accent-webflow",
-  },
-];
-
 export default function Dashboard() {
+  const apps = [
+    {
+      name: "Slack",
+      logo: "/slack_logo.svg",
+    },
+    {
+      name: "Notion",
+      logo: "/notion_logo.svg",
+    },
+    {
+      name: "Figma",
+      logo: "/figma_logo.svg",
+    },
+    {
+      name: "OpenAI",
+      logo: "/openai_logo.svg",
+    },
+    {
+      name: "Webflow",
+      logo: "/webflow_logo.svg",
+    },
+  ];
+
   return (
-    <>
-      <form className="search-bar">
-        <svg width="18" height="18" fill="none" viewBox="0 0 18 18" className="opacity-50 mr-2"><circle cx="8" cy="8" r="7" stroke="#A5A5A5" strokeWidth="1.5"/><path d="M17 17L13.5 13.5" stroke="#A5A5A5" strokeWidth="1.5" strokeLinecap="round"/></svg>
-        <input
-          type="text"
-          placeholder="Search for your apps"
-          className="bg-transparent outline-none flex-1 text-[#A5A5A5] placeholder-[#A5A5A5]"
-        />
-      </form>
-      <div className="dashboard-grid">
-        {apps.map((app) => (
-          <div key={app.name} className="app-card">
-            <img src={app.logo} alt={app.name + ' logo'} className="app-card-logo" />
-            <div className={`app-card-title ${app.accent}`}>{app.name}</div>
+    <div className="dashboard">
+      {/* Left sidebar */}
+      <div className="side_menu">
+        <div className="logo">
+          <img src="/revelium-logo.svg" alt="Revelium Studio" width={180} />
+        </div>
+        
+        <div className="menu_app">
+          <div className="apps-icon">
+            <img src="/apps-icon.svg" alt="Apps icon" width={20} height={20} />
           </div>
-        ))}
+          <div className="apps-text">Apps</div>
+        </div>
+        
+        <div className="copyright">
+          2025. Revelium™ Studio, All Rights Reserved
+        </div>
       </div>
-    </>
+      
+      {/* Main content area */}
+      <div className="apps_container">
+        {/* Search bar */}
+        <div className="search_bar">
+          <div className="search_icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="7" cy="7" r="6.25" stroke="#A5A5A5" strokeWidth="1.5"/>
+              <path d="M15 15L11.5 11.5" stroke="#A5A5A5" strokeWidth="1.5" strokeLinecap="round"/>
+            </svg>
+          </div>
+          <input 
+            type="text" 
+            placeholder="Search for your apps" 
+            className="search_input"
+          />
+        </div>
+        
+        {/* App grid */}
+        <div className="app_grid">
+          {apps.map((app) => (
+            <div key={app.name} className="app_card">
+              <div className="app_logo">
+                <img src={app.logo} alt={`${app.name} logo`} width={36} height={36} />
+              </div>
+              <div className="app_name">{app.name}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
