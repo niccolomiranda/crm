@@ -24,26 +24,18 @@ const NavLink = ({ href, isActive, children }: NavLinkProps) => {
 
 export default function Navbar() {
   return (
-    <header className="w-full h-16 bg-white border-b border-primary-light flex items-center justify-between px-6">
-      <div className="flex items-center space-x-2">
-        <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center overflow-hidden">
-          <Image 
-            src="/profile.png"
-            alt="Profile"
-            width={40}
-            height={40}
-            className="object-cover"
-          />
-        </div>
+    <header className="navbar">
+      <div className="navbar-brand">
+        Revelium <span className="font-frac tracking-wider">Studio</span><span className="ml-1 font-guise text-xs align-super">®</span>
       </div>
-
-      <nav className="flex items-center space-x-8">
-        <NavLink href="/dashboard" isActive={true}>Dashboard</NavLink>
-        <NavLink href="/planner">Planner</NavLink>
-        <NavLink href="/messages">Messages</NavLink>
-        <NavLink href="/settings">Settings</NavLink>
-        <NavLink href="/help">Help Center</NavLink>
-      </nav>
+      <div className="navbar-search">
+        <svg width="16" height="16" fill="none" viewBox="0 0 16 16" className="opacity-50"><circle cx="7" cy="7" r="6" stroke="#A5A5A5" strokeWidth="1.5"/><path d="M15 15L11.5 11.5" stroke="#A5A5A5" strokeWidth="1.5" strokeLinecap="round"/></svg>
+        <input
+          type="text"
+          placeholder="Search for your apps"
+          className="bg-transparent outline-none flex-1 text-text-muted placeholder-text-muted"
+        />
+      </div>
     </header>
   );
 } 

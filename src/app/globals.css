@@ -2,42 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
   body {
-    @apply bg-background-blue text-dark;
+    @apply bg-gradient-to-b from-dashboard-gradient-start to-dashboard-gradient-end text-text;
   }
 }
 
 @layer components {
+  .sidebar {
+    @apply bg-background-sidebar text-text-light w-56 min-h-screen flex flex-col justify-between py-8 px-6;
+  }
+  .sidebar-title {
+    @apply font-guise text-2xl tracking-tight mb-8;
+  }
   .sidebar-link {
-    @apply text-lg transition-colors duration-200 ease-in-out;
+    @apply text-base font-medium text-text-light opacity-70 hover:opacity-100 transition;
   }
-  
   .sidebar-link-active {
-    @apply text-primary font-semibold;
+    @apply opacity-100 font-bold;
   }
-  
-  .sidebar-link-inactive {
-    @apply text-text-muted hover:text-white;
+  .navbar {
+    @apply bg-background-navbar flex items-center justify-between px-8 py-4 shadow-sm;
   }
-
-  .nav-link {
-    @apply font-medium transition-colors duration-200 ease-in-out;
+  .navbar-brand {
+    @apply flex items-center gap-2 font-guise text-xl tracking-tight;
   }
-  
-  .nav-link-active {
-    @apply text-dark font-semibold;
+  .navbar-search {
+    @apply bg-background-input border border-border-input rounded-input px-4 py-2 flex items-center gap-2 text-sm text-text-muted w-64;
   }
-  
-  .nav-link-inactive {
-    @apply text-dark-muted hover:text-dark;
+  .dashboard-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8;
   }
-  
-  .badge {
-    @apply px-3 py-1 rounded-lg text-sm font-medium;
+  .app-card {
+    @apply bg-background-card rounded-card shadow-card flex flex-col items-center justify-center py-8 px-4 gap-4 border border-border;
   }
-  
-  .badge-active {
-    @apply bg-background-green text-accent-green;
+  .app-card-logo {
+    @apply w-10 h-10 mb-2;
+  }
+  .app-card-title {
+    @apply font-semibold text-sm text-text;
   }
 }

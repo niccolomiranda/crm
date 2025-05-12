@@ -9,39 +9,56 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: "#567AFB",
-          light: "#C2DEFF", 
+        background: {
+          DEFAULT: "#1D1C1C",
+          dark: "#273546",
+          card: "#F3F2F2",
+          navbar: "#FFFFFF",
+          sidebar: "#1D1C1C",
+          input: "rgba(229,229,229,0.9)",
         },
-        dark: {
-          DEFAULT: "#0F1E54",
-          muted: "rgba(15, 30, 84, 0.75)",
+        primary: {
+          DEFAULT: "#5D73C5",
         },
         accent: {
-          blue: "#5D73C5",
-          green: "#369F34",
-        },
-        background: {
-          light: "#FFFFFF",
-          blue: "#ECF5FF",
-          blueMuted: "rgba(236, 245, 255, 0.25)",
-          green: "#D2FFD2",
-          grayBlue: "#C6D9EE",
-          lightBlue: "#FAFCFF",
+          slack: "#E01E5A",
+          notion: "#000000",
+          figma: "#0ACF83",
+          openai: "#10A37F",
+          webflow: "#146EF5",
         },
         text: {
-          primary: "#0F1E54",
-          secondary: "rgba(15, 30, 84, 0.75)",
-          muted: "rgba(236, 245, 255, 0.75)",
-          active: "#4B577F",
+          DEFAULT: "#515151",
+          light: "#FFFFFF",
+          muted: "rgba(81,81,81,0.5)",
+        },
+        border: {
+          DEFAULT: "rgba(0,0,0,0.07)",
+          input: "#E2E2E2",
         },
       },
       fontFamily: {
-        poppins: ["var(--font-poppins)", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+        guise: ["HK Guise", "sans-serif"],
+        frac: ["FRAC", "sans-serif"],
       },
       boxShadow: {
-        card: "0px 5px 15px 0px rgba(86, 122, 251, 0.05)",
+        card: "0px 2.64px 3px 0px rgba(0,0,0,0.05)",
+        cardLarge: "0px 5px 15px 0px rgba(86, 122, 251, 0.05)",
       },
+      borderRadius: {
+        card: "18.5px",
+        input: "10px",
+      },
+      letterSpacing: {
+        tight: "-0.02em",
+        wider: "0.08em",
+      },
+      gradientColorStops: theme => ({
+        ...theme('colors'),
+        'dashboard-gradient-start': '#1D1C1C',
+        'dashboard-gradient-end': '#273546',
+      }),
     },
   },
   plugins: [],

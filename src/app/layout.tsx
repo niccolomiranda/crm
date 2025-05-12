@@ -27,7 +27,7 @@ export default function RootLayout({
           <Sidebar />
           <div className="flex flex-col flex-1 overflow-hidden">
             <Navbar />
-            {children}
+        {children}
           </div>
         </div>
       </body>
