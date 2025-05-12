@@ -31,9 +31,15 @@ const apps = [
 
 export default function Dashboard() {
   return (
-    <main className="flex-1 px-8 py-10">
-      <h1 className="text-3xl font-bold text-text-light mb-2 tracking-tight">Apps</h1>
-      <p className="text-text-muted mb-8">Quick access to your connected tools</p>
+    <main className="w-full">
+      <form className="search-bar">
+        <svg width="18" height="18" fill="none" viewBox="0 0 18 18" className="opacity-50 mr-2"><circle cx="8" cy="8" r="7" stroke="#A5A5A5" strokeWidth="1.5"/><path d="M17 17L13.5 13.5" stroke="#A5A5A5" strokeWidth="1.5" strokeLinecap="round"/></svg>
+        <input
+          type="text"
+          placeholder="Search for your apps"
+          className="bg-transparent outline-none flex-1 text-[#A5A5A5] placeholder-[#A5A5A5]"
+        />
+      </form>
       <div className="dashboard-grid">
         {apps.map((app) => (
           <div key={app.name} className="app-card">

@@ -9,42 +9,42 @@
     font-family: 'Inter', sans-serif;
   }
   body {
-    @apply bg-gradient-to-b from-dashboard-gradient-start to-dashboard-gradient-end text-text;
+    @apply bg-[#F8F8F8] text-text;
   }
 }
 
 @layer components {
   .sidebar {
-    @apply bg-background-sidebar text-text-light w-56 min-h-screen flex flex-col justify-between py-8 px-6;
+    @apply min-h-screen flex flex-col justify-between py-8 px-6 bg-gradient-to-b from-[#181C22] to-[#233040] w-60;
   }
   .sidebar-title {
-    @apply font-guise text-2xl tracking-tight mb-8;
+    @apply font-guise text-xl tracking-tight mb-12 text-white;
   }
   .sidebar-link {
-    @apply text-base font-medium text-text-light opacity-70 hover:opacity-100 transition;
+    @apply text-base font-medium text-white opacity-80 hover:opacity-100 transition flex items-center gap-2;
   }
   .sidebar-link-active {
     @apply opacity-100 font-bold;
   }
-  .navbar {
-    @apply bg-background-navbar flex items-center justify-between px-8 py-4 shadow-sm;
+  .sidebar-footer {
+    @apply mt-auto text-xs text-white opacity-60 mb-2;
   }
-  .navbar-brand {
-    @apply flex items-center gap-2 font-guise text-xl tracking-tight;
+  .main-container {
+    @apply bg-white rounded-2xl shadow-md p-10 mx-auto mt-4 mb-4 w-full max-w-[calc(100vw-16rem)] min-h-[90vh] flex flex-col;
   }
-  .navbar-search {
-    @apply bg-background-input border border-border-input rounded-input px-4 py-2 flex items-center gap-2 text-sm text-text-muted w-64;
+  .search-bar {
+    @apply flex items-center bg-[#F3F3F3] rounded-xl px-5 py-3 shadow-sm w-full max-w-xs mx-auto mb-10 mt-2 border border-[#E5E5E5];
   }
   .dashboard-grid {
-    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8;
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center;
   }
   .app-card {
-    @apply bg-background-card rounded-card shadow-card flex flex-col items-center justify-center py-8 px-4 gap-4 border border-border;
+    @apply bg-white rounded-xl shadow-md flex flex-col items-center justify-center py-10 px-8 gap-4 border border-[#E5E5E5] min-w-[170px] min-h-[170px];
   }
   .app-card-logo {
-    @apply w-10 h-10 mb-2;
+    @apply w-14 h-14 mb-2;
   }
   .app-card-title {
-    @apply font-semibold text-sm text-text;
+    @apply font-medium text-base text-[#515151];
   }
 }

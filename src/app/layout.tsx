@@ -1,14 +1,6 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
-import Navbar from "@/components/Navbar";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
-});
 
 export const metadata: Metadata = {
   title: "CRM Manager",
@@ -22,12 +14,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} font-poppins`}>
-        <div className="flex h-screen overflow-hidden">
+      <body>
+        <div className="flex min-h-screen bg-[#F8F8F8]">
           <Sidebar />
-          <div className="flex flex-col flex-1 overflow-hidden">
-            <Navbar />
-        {children}
+          <div className="flex-1 flex justify-center items-start">
+            <div className="main-container">
+              {children}
+            </div>
           </div>
         </div>
       </body>
