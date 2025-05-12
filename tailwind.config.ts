@@ -36,6 +36,8 @@ const config: Config = {
           DEFAULT: "rgba(0,0,0,0.07)",
           input: "#E2E2E2",
         },
+        'dashboard-gradient-start': '#1D1C1C',
+        'dashboard-gradient-end': '#273546',
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
@@ -54,11 +56,6 @@ const config: Config = {
         tight: "-0.02em",
         wider: "0.08em",
       },
-      gradientColorStops: theme => ({
-        ...theme('colors'),
-        'dashboard-gradient-start': '#1D1C1C',
-        'dashboard-gradient-end': '#273546',
-      }),
     },
   },
   plugins: [],
