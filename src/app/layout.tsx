@@ -17,9 +17,11 @@ export default function RootLayout({
       <body>
         <div className="flex min-h-screen bg-gradient-to-b from-[#181C22] to-[#233040]">
           <Sidebar />
-          <main className="flex-1 flex justify-center items-start">
-            <div className="main-container w-full">
-              {children}
+          <main className="flex-1 flex justify-center items-stretch">
+            <div className="main-container">
+              <div className="main-content-inner">
+                {children}
+              </div>
             </div>
           </main>
         </div>

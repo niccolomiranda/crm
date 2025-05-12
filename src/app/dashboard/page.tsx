@@ -31,8 +31,8 @@ const apps = [
 
 export default function Dashboard() {
   return (
-    <div className="w-full">
-      <form className="search-bar ml-0 mb-10 mt-2">
+    <>
+      <form className="search-bar">
         <svg width="18" height="18" fill="none" viewBox="0 0 18 18" className="opacity-50 mr-2"><circle cx="8" cy="8" r="7" stroke="#A5A5A5" strokeWidth="1.5"/><path d="M17 17L13.5 13.5" stroke="#A5A5A5" strokeWidth="1.5" strokeLinecap="round"/></svg>
         <input
           type="text"
@@ -48,6 +48,6 @@ export default function Dashboard() {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }
