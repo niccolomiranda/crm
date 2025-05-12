@@ -30,24 +30,8 @@ export default function Dashboard() {
       {/* Left sidebar */}
       <div className="side_menu">
         <div className="logo">
-          <img src="/revelium-logo.svg" alt="Revelium Studio" width={180} />
+          <img src="/revelium-logo.svg" alt="Revelium Studio" width={80} height={32} />
         </div>
-        
-        <div className="menu_app">
-          <div className="apps-icon">
-            <img src="/apps-icon.svg" alt="Apps icon" width={20} height={20} />
-          </div>
-          <div className="apps-text">Apps</div>
-        </div>
-        
-        <div className="copyright">
-          2025. Revelium™ Studio, All Rights Reserved
-        </div>
-      </div>
-      
-      {/* Main content area */}
-      <div className="apps_container">
-        {/* Search bar */}
         <div className="search_bar">
           <div className="search_icon">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,8 +45,18 @@ export default function Dashboard() {
             className="search_input"
           />
         </div>
-        
-        {/* App grid */}
+        <div className="menu_app">
+          <div className="apps-icon">
+            <img src="/apps-icon.svg" alt="Apps icon" width={20} height={20} />
+          </div>
+          <div className="apps-text">Apps</div>
+        </div>
+        <div className="copyright">
+          2025. Revelium™ Studio, All Rights Reserved
+        </div>
+      </div>
+      {/* Main content area */}
+      <div className="apps_container">
         <div className="app_grid">
           {apps.map((app) => (
             <div key={app.name} className="app_card">
