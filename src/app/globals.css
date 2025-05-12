@@ -9,13 +9,13 @@
     font-family: 'Inter', sans-serif;
   }
   body {
-    @apply bg-[#F8F8F8] text-text;
+    @apply min-h-screen bg-gradient-to-b from-[#181C22] to-[#233040] text-text;
   }
 }
 
 @layer components {
   .sidebar {
-    @apply min-h-screen flex flex-col justify-between py-8 px-6 bg-gradient-to-b from-[#181C22] to-[#233040] w-60;
+    @apply min-h-screen flex flex-col justify-between py-8 px-6 bg-transparent w-[300px] flex-shrink-0;
   }
   .sidebar-title {
     @apply font-guise text-xl tracking-tight mb-12 text-white;
@@ -30,13 +30,13 @@
     @apply mt-auto text-xs text-white opacity-60 mb-2;
   }
   .main-container {
-    @apply bg-white rounded-2xl shadow-md p-10 mx-auto mt-4 mb-4 w-full max-w-[calc(100vw-16rem)] min-h-[90vh] flex flex-col;
+    @apply bg-white rounded-2xl shadow-md p-10 mx-auto mt-4 mb-4 w-full max-w-7xl min-h-[90vh] flex flex-col;
   }
   .search-bar {
-    @apply flex items-center bg-[#F3F3F3] rounded-xl px-5 py-3 shadow-sm w-full max-w-xs mx-auto mb-10 mt-2 border border-[#E5E5E5];
+    @apply flex items-center bg-[#F3F3F3] rounded-xl px-5 py-3 shadow-sm w-full max-w-xs mb-10 mt-2 border border-[#E5E5E5];
   }
   .dashboard-grid {
-    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center;
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 w-full;
   }
   .app-card {
     @apply bg-white rounded-xl shadow-md flex flex-col items-center justify-center py-10 px-8 gap-4 border border-[#E5E5E5] min-w-[170px] min-h-[170px];

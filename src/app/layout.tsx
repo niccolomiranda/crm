@@ -15,13 +15,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="flex min-h-screen bg-[#F8F8F8]">
+        <div className="flex min-h-screen bg-gradient-to-b from-[#181C22] to-[#233040]">
           <Sidebar />
-          <div className="flex-1 flex justify-center items-start">
-            <div className="main-container">
+          <main className="flex-1 flex justify-center items-start">
+            <div className="main-container w-full">
               {children}
             </div>
-          </div>
+          </main>
         </div>
       </body>
     </html>
