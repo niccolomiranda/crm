@@ -15,7 +15,10 @@
 
 @layer components {
   .sidebar {
-    @apply min-h-screen flex flex-col justify-between py-8 px-6 bg-transparent w-[300px] flex-shrink-0;
+    @apply h-screen flex flex-col justify-between py-8 px-6 bg-transparent;
+    width: 30vw;
+    min-width: 220px;
+    max-width: 400px;
   }
   .sidebar-title {
     @apply font-guise text-xl tracking-tight mb-12 text-white;
@@ -30,18 +33,23 @@
     @apply mt-auto text-xs text-white opacity-60 mb-2;
   }
   .main-container {
-    @apply bg-[#F3F2F2] min-h-screen h-screen w-full flex flex-col justify-center items-center transition-all duration-300 rounded-none md:rounded-2xl shadow-md p-0 md:p-10;
+    @apply h-screen bg-[#F3F2F2] flex flex-col pt-10 pr-10 pb-10 overflow-auto;
     width: 70vw;
-    max-width: calc(100vw - 300px);
+    min-width: 320px;
+    max-width: 100vw;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
   }
   .main-content-inner {
-    @apply w-full max-w-3xl mx-auto flex flex-col items-center;
+    @apply w-full flex flex-col;
   }
   .search-bar {
-    @apply flex items-center bg-[#F3F3F3] rounded-xl px-5 py-3 shadow-sm w-full max-w-xl mb-10 mt-10 border border-[#E5E5E5];
+    @apply flex items-center bg-[#F3F3F3] rounded-xl px-5 py-3 shadow-sm w-full mb-10 border border-[#E5E5E5];
+    max-width: none;
   }
   .dashboard-grid {
-    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 w-full justify-items-center;
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 w-full;
+    justify-items: start;
   }
   .app-card {
     @apply bg-white rounded-xl shadow-md flex flex-col items-center justify-center py-10 px-8 gap-4 border border-[#E5E5E5] min-w-[170px] min-h-[170px];
