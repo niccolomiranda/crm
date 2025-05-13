@@ -74,34 +74,34 @@ export default function Dashboard() {
       console.error("Error generating Slack invite:", error);
     }
   };
-  
-  const apps = [
-    {
-      name: "Slack",
-      logo: "/slack_logo.svg",
+
+const apps = [
+  {
+    name: "Slack",
+    logo: "/slack_logo.svg",
       getUrl: () => slackInviteUrl || `https://join.slack.com/t/revelium-studio/signup?email=${encodeURIComponent(userEmail)}`
-    },
-    {
-      name: "Notion",
-      logo: "/notion_logo.svg",
+  },
+  {
+    name: "Notion",
+    logo: "/notion_logo.svg",
       getUrl: () => `https://www.notion.so/login?email=${encodeURIComponent(userEmail)}`
-    },
-    {
-      name: "Figma",
-      logo: "/figma_logo.svg",
+  },
+  {
+    name: "Figma",
+    logo: "/figma_logo.svg",
       getUrl: () => "https://www.figma.com/login"
-    },
-    {
-      name: "OpenAI",
-      logo: "/openai_logo.svg",
+  },
+  {
+    name: "OpenAI",
+    logo: "/openai_logo.svg",
       getUrl: () => "https://platform.openai.com/login"
-    },
-    {
-      name: "Webflow",
-      logo: "/webflow_logo.svg",
+  },
+  {
+    name: "Webflow",
+    logo: "/webflow_logo.svg",
       getUrl: () => "https://webflow.com/dashboard"
-    },
-  ];
+  },
+];
 
   const filteredApps = apps.filter(app => 
     app.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -136,13 +136,13 @@ export default function Dashboard() {
               <path d="M15 15L11.5 11.5" stroke="#A5A5A5" strokeWidth="1.5" strokeLinecap="round"/>
             </svg>
           </div>
-          <input 
-            type="text" 
-            placeholder="Search for your apps" 
+        <input
+          type="text"
+          placeholder="Search for your apps"
             className="search_input"
             value={searchTerm}
             onChange={handleSearch}
-          />
+        />
         </div>
         <div className="menu_app">
           <div className="apps-icon">
@@ -175,7 +175,7 @@ export default function Dashboard() {
               </div>
               <div className="app_name">{app.name}</div>
             </a>
-          ))}
+        ))}
         </div>
       </div>
     </div>
