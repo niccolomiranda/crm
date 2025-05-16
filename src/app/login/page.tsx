@@ -9,7 +9,7 @@ export default function Login() {
             <img src="/logo.svg" alt="Revelium Logo" style={{width: 48, height: 48}} />
           </div>
           <div>
-            <h1 className="login-title">Welcome to Revelium</h1>
+            <h1 className="login-title">Welcome</h1>
             <p className="login-subtitle">Enter credentials received via email to access</p>
           </div>
           <form className="login-form" autoComplete="off" style={{width: '100%'}}>
